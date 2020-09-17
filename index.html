@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <h1 style="text-align: center;">Quiz!</h1>
+        </div>
+        <div class="row">
+            <p>
+                Try to answer all of the questions before the time expires.
+            </p>
+        </div>
+        <div class="row">
+            <button class="btn btn-primary" id="start">Start</button>
+        </div>
+        <div class="row">
+            <p></p>
+        </div>
+        <div class="row">
+            <button class="btn btn-primary" id="leaderboard">Leaderboard</button>
+        </div>
+
+</script>
+        </div>
+
+        <div class="question-display">
+            <div class='row'>
+                <div class="col col-md-8 offset-md-2">
+                    <h2 id='question'>Question</h2>
+                    <ul id='choice' style="list-style: none">
+                        <li><button type="button" class="btn btn-primary btn-block btn-margin" id='Option01'>Option01</button></li>
+                        <li><button type="button" class="btn btn-primary btn-block btn-margin" id='Option02'>Option02</button></li>
+                        <li><button type="button" class="btn btn-primary btn-block btn-margin" id='Option03'>Option03</button></li>
+                        <li><button type="button" class="btn btn-primary btn-block btn-margin" id='Option04'>Option04</button></li>
+                    </ul>
+                    <div class="alert alert-light" role="alert">
+                        <p id='answerChoice' style='visibility: hidden;'></p>
+                    </div>
+                </div>
+            </div>
+
+
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

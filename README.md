@@ -1,1 +1,2 @@
 # Web-APIs-Code-Quiz
+The goal of this application is to ask the user a series of questions with multiple answers to select from by clicking buttons. When the user starts the quiz, a timer should begin. When the user selects an incorrect answer, the time remaining will decrease. At the end of the quiz, the user will be prompted to enter their information to see where they are on the "leaderboard".
