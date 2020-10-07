@@ -4,59 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Code Quiz</title>
+    <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
-
-    <div class="container">
-        <div class="row">
-            <h1 style="text-align: center;">Quiz!</h1>
-        </div>
-        <div class="row">
-            <p>
-                Try to answer all of the questions before the time expires.
-            </p>
-        </div>
-        <div class="row">
-            <button class="btn btn-primary" id="start">Start</button>
-        </div>
-        <div class="row">
-            <p></p>
-        </div>
-        <div class="row">
-            <button class="btn btn-primary" id="leaderboard">Leaderboard</button>
+    <!-- row -->
+    <div class="header row" id="header">
+        <!-- col -->
+        <div class="highscore col">
+            <!-- highscore -->
+            <a href="view-highscore">View Highscore</a>
         </div>
 
-</script>
+        <!-- timer -->
+        <div class="col text-right" id="timer-header">
+            <p>Time Remaining: <span id="timer">60</span></p>
         </div>
 
-        <div class="question-display">
-            <div class='row'>
-                <div class="col col-md-8 offset-md-2">
-                    <h2 id='question'>Question</h2>
-                    <ul id='choice' style="list-style: none">
-                        <li><button type="button" class="btn btn-primary btn-block btn-margin" id='Option01'>Option01</button></li>
-                        <li><button type="button" class="btn btn-primary btn-block btn-margin" id='Option02'>Option02</button></li>
-                        <li><button type="button" class="btn btn-primary btn-block btn-margin" id='Option03'>Option03</button></li>
-                        <li><button type="button" class="btn btn-primary btn-block btn-margin" id='Option04'>Option04</button></li>
-                    </ul>
-                    <div class="alert alert-light" role="alert">
-                        <p id='answerChoice' style='visibility: hidden;'></p>
-                    </div>
-                </div>
+
+        <!-- instructions / card 01 -->
+        <div class="card text-center col-12 col-sm-10 col-md-9 col-lg-6" id="instructions">
+            <div>
+                <h1 class="card-title">Coding Quiz </h1>
+                <p>Try to answer all of the questions before the time expires.</p>
+                <button class="btn btn-primary" id="start">Start</button>
             </div>
+        </div>
 
 
-    </div>
+        <!-- layout of quiz card -->
+        <!-- <div class="card text-left col-12 col-sm-10 col-md-9 col-lg-6" id="question-display">
+            <div>
+                <h3 class="card-title" id="question">Insert question.</h3>
+                <ul>
+                    <li><button class="btn" id="ans1">A: Answer 1</button></li>
+                    <li><button class="btn" id="ans2">B: Answer 2</button></li>
+                    <li><button class="btn" id="ans3">C: Answer 3</button></li>
+                    <li><button class="btn" id="ans4">D: Answer 4</button></li>
+                </ul>
+            </div>
+            <p>
+                <span id="correct-or-not"></span>
+            </p>
+        </div> -->
+
+        <!-- completed card -->
+        <div class="card display-none" id="completed-card">
+            <div class="card-body">
+                <h3 class="card-title">Quiz Completed!</h3>
+                <p class="card-text">Your score is <span id="final-score"></span></p>
+                <form class="row">
+                    <div class="col">
+                        <label>Your Initials: </label>
+                    </div>
+                    <div class="col">
+                        <input type="text" id="initials-input">
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-primary" id="submit-high-score">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
 
+        <!-- highscore card -->
+        <div class="card display-none" id="highscore-card">
+            <div class="card-body">
+                <h3 class="card-title" id="highscores-title">Highscores</h3>
+                <ol id="highscore-list"></ol>
+                <button class="btn" id="return-btn">Return</button>
+            </div>
+        </div>
 
-
-    <script src="script.js"></script>
+        <!-- javascript -->
+        <script src="script.js"></script>
 </body>
 
 </html>
